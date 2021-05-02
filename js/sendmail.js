@@ -8,8 +8,12 @@ function sendMail(params){
     emailjs.send('service_d32cn5i','template_91ma2nh',tempParams )
 
     .then(function(res){
-        
+        resetForm()
         console.log("success", res.status);
     })
     
+}
+
+function resetForm(){
+    document.getElementById("clear-form").reset();
 }
